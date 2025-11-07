@@ -6,11 +6,9 @@
   <title>Invitación de Promo</title>
   <style>
     html,body { height:100%; margin:0; }
-    /* Contenedor que hace que el iframe ocupe toda la pantalla */
     .frame-wrap {
       width:100%;
       height:100vh;
-      display:block;
       position:relative;
       overflow:hidden;
     }
@@ -20,15 +18,15 @@
       border:0;
       display:block;
     }
-    /* Si la franja de abajo sigue visible, puedes poner un overlay para cubrirla */
+    /* Cubre visualmente la franja inferior (ajusta height si es necesario) */
     .bottom-cover {
       position:fixed;
       left:0;
       right:0;
       bottom:0;
-      height:60px; /* ajusta según el tamaño de la franja que quieras cubrir */
-      pointer-events:none; /* para que no interfiera con clicks */
-      background:linear-gradient(#ffffff00,#ffffff); /* efecto sutil; cambia según fondo */
+      height:60px; /* ajusta si la franja es más alta o más baja */
+      pointer-events:none;
+      background:linear-gradient(rgba(255,255,255,0), #ffffff);
       z-index:9999;
     }
   </style>
@@ -36,7 +34,7 @@
 <body>
   <div class="frame-wrap">
     <iframe
-      src="https://graduacionheiffet25.renderforestsites.com"
+      src="https://graduacionheiffet25.renderforestsites.com/"
       title="Invitación Promo"
       loading="lazy"
       allowfullscreen
@@ -44,7 +42,6 @@
     ></iframe>
   </div>
 
-  <!-- Opcional: elemento para cubrir la franja inferior visualmente -->
   <div class="bottom-cover" aria-hidden="true"></div>
 </body>
 </html>
